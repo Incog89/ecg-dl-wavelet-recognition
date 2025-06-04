@@ -1,0 +1,13 @@
+ecg = load("100m.mat");
+skip = 65536;
+fn = fieldnames(ecg);
+tmp = [fn.'; repmat({[]}, 1, length(fn))];
+newdata = struct(tmp{:});
+
+for K = 1 : length(fn)
+  newdata.(fn{K}) = ecg.(fn{K})(skip+1:end);
+end
+save('YourNewFile.mat', 'newdata', '-struct');
+
+
+

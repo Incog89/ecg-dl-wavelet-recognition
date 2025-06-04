@@ -1,0 +1,95 @@
+<html>  
+<head>
+    <style>     
+        html{     
+        background-color: white;     
+        padding: 5px;     
+        width: 95%;     
+        }     
+        pre {     
+        overflow-x: auto;     
+        white-space: pre-wrap;     
+        white-space: -moz-pre-wrap;     
+        white-space: -pre-wrap;     
+        white-space: -o-pre-wrap;     
+        word-wrap: break-word;     
+        }     
+    </style>     
+    
+    <script type="text/javascript">     
+            
+            function setup(htmlComponent) {     
+            
+				htmlComponent.addEventListener("DataChanged", function(event) {     
+				scrollID =  htmlComponent.Data;     
+					if (scrollID != ''){
+						if(scrollID==="bottom"){         
+							scrollToBottom();     
+						} else if(scrollID==="DOWNLOAD_MCRINSTALLER" || scrollID==="BUILD_MISSING" || scrollID==="SAMPLE_GEN" || scrollID==="USER_REQUESTED_PACKAGE"){     
+							document.getElementById(scrollID).scrollIntoView(true);     
+						} else {     
+							//document.body.innerHTML = document.body.innerHTML + scrollID;     
+							document.body.appendChild(scrollID);                 
+							scrollToBottom();     
+						}    
+						htmlComponent.Data = '';
+					}		
+				});          
+            }     
+            function scrollToBottom(){     
+            var scrollingElement = (document.scrollingElement || document.body);     
+            scrollingElement.scrollTop = scrollingElement.scrollHeight;     
+            }     
+            
+    </script> 
+</head>
+ <body><meta charset="UTF-8">        
+ <pre><font color=blue>mcc -W 'webapp:app1_1,CONFIG:C:\Users\joyke\AppData\Local\Temp\tp9b7cb939_a2a7_4aa0_8d8d_e9cc8e891b00.xml' -d C:\Users\joyke\OneDrive\Escritorio\Programacion\app1_1 -v -Z autodetect -C C:\Users\joyke\OneDrive\Escritorio\Programacion\InicioSesion.mlapp</font>
+Compiler version: 8.6 (R2023a)
+Analyzing file dependencies. 
+<font color='orange'>Warning: Web apps that generate additional windows or apps are currently not supported.
+Check the following .mlapp files for window and app dependencies:
+C:\Users\joyke\OneDrive\Escritorio\Programacion\InicioSesion.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\IntDatosG.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\ManipularRedGApp.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\ManipularRedSApp.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\ManipularRegistros.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\Recuperacion.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\adminUsuarios.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\crearUsuarios.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\interfaceDatosS.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\interfazIndex.mlapp
+C:\Users\joyke\OneDrive\Escritorio\Programacion\modificarUsuario.mlapp</font> 
+<font color='orange'>Warning: MATLAB preference entry "SMTP_Username" has been removed.</font> 
+<font color='orange'>> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal.build.builder/Generic/build', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m', 83)" style="font-weight:bold">compiler.internal.build.builder/Generic/build</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m',83,0)">line 83</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.build.webAppArchive', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m', 92)" style="font-weight:bold">compiler.build.webAppArchive</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m',92,0)">line 92</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.compiler.ui.deployProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m', 111)" style="font-weight:bold">matlab.internal.compiler.ui.deployProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m',111,0)">line 111</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal/WebAppSharingStrategy/showProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m', 41)" style="font-weight:bold">compiler.internal/WebAppSharingStrategy/showProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m',41,0)">line 41</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.deployment/AppSharingStrategy/share', 'C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m', 35)" style="font-weight:bold">matlab.internal.deployment/AppSharingStrategy/share</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m',35,0)">line 35</a>)
+In connector.internal.fevalMatlab
+In connector.internal.fevalJSON</font> 
+<font color='orange'>Warning: MATLAB preference entry "SMTP_Password" has been removed.</font> 
+<font color='orange'>> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal.build.builder/Generic/build', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m', 83)" style="font-weight:bold">compiler.internal.build.builder/Generic/build</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m',83,0)">line 83</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.build.webAppArchive', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m', 92)" style="font-weight:bold">compiler.build.webAppArchive</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m',92,0)">line 92</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.compiler.ui.deployProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m', 111)" style="font-weight:bold">matlab.internal.compiler.ui.deployProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m',111,0)">line 111</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal/WebAppSharingStrategy/showProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m', 41)" style="font-weight:bold">compiler.internal/WebAppSharingStrategy/showProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m',41,0)">line 41</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.deployment/AppSharingStrategy/share', 'C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m', 35)" style="font-weight:bold">matlab.internal.deployment/AppSharingStrategy/share</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m',35,0)">line 35</a>)
+In connector.internal.fevalMatlab
+In connector.internal.fevalJSON</font> 
+<font color='orange'>Warning: Your deployed application may fail because file or folder paths
+not present in the deployed environment may be included in your MATLAB startup
+file. Use the MATLAB function "isdeployed" in your MATLAB startup file to
+determine the appropriate execution environment when including file and folder
+paths, and recompile your application.
+</font> 
+<font color='orange'>> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal.build.builder/Generic/build', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m', 83)" style="font-weight:bold">compiler.internal.build.builder/Generic/build</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+internal\+build\+builder\Generic.m',83,0)">line 83</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.build.webAppArchive', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m', 92)" style="font-weight:bold">compiler.build.webAppArchive</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\cli\build\+compiler\+build\webAppArchive.m',92,0)">line 92</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.compiler.ui.deployProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m', 111)" style="font-weight:bold">matlab.internal.compiler.ui.deployProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\ui\package_dialog\+matlab\+internal\+compiler\+ui\deployProject.m',111,0)">line 111</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compiler.internal/WebAppSharingStrategy/showProject', 'C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m', 41)" style="font-weight:bold">compiler.internal/WebAppSharingStrategy/showProject</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\compiler\+compiler\+internal\WebAppSharingStrategy.m',41,0)">line 41</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.internal.deployment/AppSharingStrategy/share', 'C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m', 35)" style="font-weight:bold">matlab.internal.deployment/AppSharingStrategy/share</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2023a\toolbox\matlab\apps\+matlab\+internal\+deployment\AppSharingStrategy.m',35,0)">line 35</a>)
+In connector.internal.fevalMatlab
+In connector.internal.fevalJSON</font> 
+Parsing file "C:\Users\joyke\OneDrive\Escritorio\Programacion\InicioSesion.mlapp"
+	(referenced from command line).
+
+</pre></body></html>
